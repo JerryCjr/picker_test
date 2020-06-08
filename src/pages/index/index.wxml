@@ -1,6 +1,12 @@
-<view class="container">
-  <view class="logo">
-    <image src='{{src}}' class="logo" mode="widthFix"></image>
-  </view>
-  <text class="message active">babyfs mina gulp!</text>
+<view class="h5">
+  <component-picker
+    bind:resolve="resolve"
+    initial="{{initObj}}"
+  >
+    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+    <view
+      class="test"
+      slot="picker"
+    >{{areaShow}}</view>
+  </component-picker>
 </view>

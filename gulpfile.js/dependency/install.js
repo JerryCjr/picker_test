@@ -119,6 +119,10 @@ const recursiveReadDir = async (priority, relative, dir, handler) => {
   const promises = dirents.map(async dirent => {
     const direntName = dirent.name;
     if (dirent.isDirectory()) {
+      if (/node_modules/.test(direntName)) {
+        console.log(direntName);
+        return false;
+      }
       await recursiveReadDir(priority, path.join(relative, direntName), path.resolve(dir, direntName), handler);
     } else if (dirent.isFile()) {
       if (priority === 1) {

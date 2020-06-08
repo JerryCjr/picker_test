@@ -46,6 +46,8 @@
     "yargs": "^12.0.2"
   },
   "dependencies": {
-    "babyfs-wxapp-runningtime": "^1.1.1"
+    "babyfs-wxapp-picker": "^1.1.1",
+    "babyfs-wxapp-runningtime": "^1.1.1",
+    "miniprogram-navigation-bar": "0.0.4"
   }
 }
